@@ -8,7 +8,7 @@ function App() {
 
   const loadCourses = async () => {
     try {
-      const response = await fetch(process.env.REACT_APP_API_URL + "/courses");
+      const response = await fetch("/courses");
       const result = await response.json();
       setCourses(result.records);
     } catch (error) {

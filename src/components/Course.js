@@ -4,7 +4,7 @@ const Course = ({ course, refreshCourses }) => {
   const { fields, id } = course;
   const markCoursePurchased = async () => {
     try {
-      await fetch(process.env.REACT_APP_API_URL + "/courses", {
+      await fetch("/courses", {
         method: "PUT",
 
         body: JSON.stringify({
@@ -28,7 +28,7 @@ const Course = ({ course, refreshCourses }) => {
 
   const deleteCourse = async () => {
     try {
-      await fetch(process.env.REACT_APP_API_URL + `/courses?records[]=${id}`, {
+      await fetch(`/courses?records[]=${id}`, {
         method: "DELETE",
       });
       refreshCourses();

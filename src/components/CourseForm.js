@@ -16,7 +16,7 @@ export default function CourseForm({ courseAdded }) {
   const submitCourse = async (e) => {
     e.preventDefault();
     try {
-      await fetch(process.env.REACT_APP_API_URL + "/courses", {
+      await fetch("/courses", {
         method: "POST",
         body: JSON.stringify({ fields: { name, link, tags }, typecast: true }),
       });

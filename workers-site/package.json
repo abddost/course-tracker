@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "A template for kick starting a Cloudflare Workers project",
+  "main": "./src/index.js",
+  "author": "Ashley Lewis <ashleymichal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "~0.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "coveralls": "^3.0.3",
+    "dotenv-webpack": "^8.0.1",
+    "jest": "^23.6.0",
+    "prettier": "1.14.2"
+  }
+}

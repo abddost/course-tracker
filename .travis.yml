@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+- "12"
+
+script:
+- npm run test
+- npm run build
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash scripts/deploy
+  on:
+    branch: master
